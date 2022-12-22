@@ -43,7 +43,7 @@ class Lexer:
 
             elif self.currentChar.isdigit():
                 start = self.position
-                while self.currentChar.isdigit() or self.currentChar==".":
+                while self.currentChar != None and (self.currentChar.isdigit() or self.currentChar=="."):
                     self.nextChar()
 
                 length = self.position - start
